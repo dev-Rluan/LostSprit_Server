@@ -1,6 +1,18 @@
 # LostSprit_Server
-(수정중)
-C# 소켓 통신 프로그램
+
+멀티플레이 게임의 연결·세션·방·패킷을 관리하는 C# 소켓 서버 구현 기록입니다. 인프런의 C#·Unity MMORPG 게임 개발 시리즈 Part 4 강의를 바탕으로 만들었습니다.
+
+## 코드 살펴보기
+
+- [Server.sln](Server.sln): Visual Studio 솔루션
+- [Server](Server): 서버 진입점·게임방·세션·DB 연결
+- [ServerCore](ServerCore): 공통 소켓 통신 라이브러리
+- [Client](Client) · [DummyClient](DummyClient): 클라이언트 코드
+- [PacketGenerator](PacketGenerator): 패킷 코드 생성
+
+서버 프로젝트는 `netcoreapp3.1`을 대상으로 하며 MySQL을 사용합니다. 실행 시 프로젝트의 DB·네트워크 설정을 확인합니다. 기존 문서의 수정 중 상태와 상세 구현·강의 출처는 아래에 보존합니다.
+
+## 상세 구현 기록
 - 멀티플레이 게임을 위한 서버
 - 콘솔 프로그램 + Socket 통신
  * ![image](https://user-images.githubusercontent.com/73861946/141686016-addfc4f3-3d79-4684-9e02-8766fd4b5786.png)
